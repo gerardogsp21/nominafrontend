@@ -1,0 +1,11 @@
+{
+  "dest": "release-builds/",
+  "icon": "assets/icons/win/icon.ico",
+  "categories": [
+    "Utility"
+  ],
+  "lintianOverrides": [
+    "changelog-file-missing-in-native-package"
+  ],
+  "description": "Esta es una aplicacion de nomina"
+}

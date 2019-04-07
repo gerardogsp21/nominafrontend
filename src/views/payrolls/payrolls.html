@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/bootstrap.min.css">
+    <script src="../../../assets/js/jquery.js"></script>
+    <script src="../../../assets/js/bootstrap.min.js"></script>
+    <script src="./payrolls.controller.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nominas</title>
+</head>
+<body>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#list">Listado</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#registrer">Registrar</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade show active" id="list">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table id="table_payrolls" class="table">
+                        <thead>
+                            <tr>
+                                <th>Empleado</th>
+                                <th>Días laborados</th>
+                                <th>Sueldo</th>
+                                <th>Aux. transp.</th>
+                                <th>Tot. Devengado</th>
+                                <th>Salud</th>
+                                <th>Pensión</th>
+                                <th>FSP</th>
+                                <th>Tot. deducido</th>
+                                <th>Neto a pagar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+         </div>  
+  </div>
+  <div class="tab-pane fade" id="registrer">
+    <form id="registrer_payrolls">
+        <div class="row">
+            <div class="container p-4">
+                <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-3">
+                        <label for="sueldo_minimo">Salario minimo</label>
+                        <input type="number" class="form-control" name="sueldo_minimo" 
+                        id="sueldo_minimo" required>
+                    </div>
+                     <div class="col-sm-3">
+                        <label for="aux_transp">Auxilio de transporte Nac.</label>
+                        <input type="number" class="form-control" name="aux_transp" 
+                        id="aux_transp" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label for="empleado_id">Empleado</label>
+                        <select class="form-control" name="empleado_id" id="empleado_id" required>
+                            <option value=""></option>
+                        </select>
+                    </div> 
+                    <div class="col-sm-6">
+                        <label for="salario">Salario</label>
+                        <input type="number" class="form-control" name="salario" id="salario" required>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="dias_laborados">Días laborados</label>
+                        <input type="number" class="form-control" name="dias_laborados" 
+                               id="dias_laborados" required>
+                    </div> 
+                    <div class="col-sm-6">
+                        <label for="sueldo">Sueldo</label>
+                        <input type="number" class="form-control" name="sueldo" 
+                                id="sueldo" required>
+                    </div> 
+
+                    <div class="col-sm-6">
+                        <label for="auxlio_transporte">Auxlio transporte</label>
+                        <input type="number" class="form-control" name="auxlio_transporte" id="auxlio_transporte" required>
+                    </div> 
+                    <div class="col-sm-6">
+                        <label for="total_devengado">Total devengado</label>
+                        <input type="number" class="form-control" name="total_devengado" 
+                        id="total_devengado"  required>
+                    </div> 
+
+                    <div class="col-sm-4">
+                        <label for="salud">salud</label>
+                        <input type="number" class="form-control" name="salud" id="salud"  required>
+                    </div>  
+                    <div class="col-sm-4">
+                        <label for="pension">Pensión</label>
+                        <input type="number" class="form-control" name="pension" id="pension"  required>
+                    </div>   
+                    <div class="col-sm-4">
+                        <label for="fsp">FSP</label>
+                        <input type="number" class="form-control" name="fsp" id="fsp"  required>
+                    </div> 
+
+                    <div class="col-sm-6">
+                        <label for="total_deducido">Total deducido</label>
+                        <input type="number" class="form-control" name="total_deducido" id="total_deducido"  required>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="neto_pagar">Neto a pagar</label>
+                        <input type="number" class="form-control" name="neto_pagar" id="neto_pagar"  required>
+                    </div>
+
+
+                </div> <br>
+                <div id="mensaje" class="alert alert-dismissible alert-success">
+                  <button type="button" class="close" data-dismiss="alert">&times;</button>
+                  Registrado!
+                </div><br>
+                <div class="row">
+                    <div class="col-sm-12" align="center">
+                        <button id="btn_registrar" class="btn btn-primary">Registrar</button>
+                    </div>  
+                </div>    
+            </div>        
+        </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
+
